@@ -1,0 +1,19 @@
+package models;
+
+import java.time.LocalDateTime;
+
+public class Tarefa {
+	
+	private Long idTarefa;
+	
+	private String titulo;
+	
+	private String descricao;
+	
+	private LocalDateTime dataCriacao;
+	
+	private Status status;
+	
+	private Usuario idUsuario;
+
+}

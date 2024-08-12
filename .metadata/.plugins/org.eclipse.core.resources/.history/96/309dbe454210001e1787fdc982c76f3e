@@ -1,0 +1,30 @@
+package models;
+
+import java.time.LocalDateTime;
+
+import enums.Status;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "tb_tarefas")
+public class Tarefa {
+	
+	private Long idTarefa;
+	
+	private String titulo;
+	
+	private String descricao;
+	
+	private LocalDateTime dataCriacao;
+	
+	private Status status;
+	
+	private Usuario idUsuario;	
+}

@@ -1,0 +1,9 @@
+package models;
+
+public class Usuario {
+	
+	private Long idUsuario;
+	
+	
+
+}

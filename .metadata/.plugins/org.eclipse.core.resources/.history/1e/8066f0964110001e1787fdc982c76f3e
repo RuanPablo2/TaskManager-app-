@@ -1,0 +1,21 @@
+package models;
+
+import java.time.LocalDateTime;
+
+import enums.Status;
+
+public class Tarefa {
+	
+	private Long idTarefa;
+	
+	private String titulo;
+	
+	private String descricao;
+	
+	private LocalDateTime dataCriacao;
+	
+	private Status status;
+	
+	private Usuario idUsuario;
+
+}

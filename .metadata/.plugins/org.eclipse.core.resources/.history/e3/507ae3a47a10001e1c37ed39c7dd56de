@@ -1,0 +1,32 @@
+package services;
+
+import java.util.List;
+
+import org.hibernate.ObjectNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
+import org.springframework.stereotype.Service;
+
+import models.Tarefa;
+import repositories.TarefaRepository;
+
+@Service
+public class TarefaService {
+	
+	@Autowired
+	TarefaRepository repository;
+	
+	public List<Tarefa> findAll(){
+		return repository.findAll();
+	}
+	
+	public Tarefa findById(Long id) {
+		
+		try {
+			Tarefa tarefa = repository.findById(id).get();
+		} catch (NotFoundException e) {
+			throw new ObjectNotFoundException("Tarefa não encontrada para o id:" + id + ".");
+		}
+	}
+
+}
